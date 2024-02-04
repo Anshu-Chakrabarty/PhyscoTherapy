@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health</title>
+
+    <style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background: #b7794c;
+        color: #fff; /* Set text color to white for better readability on the gradient background */
+    }
+    
+    body {
+        margin: 0;
+        
+        background: linear-gradient(45deg, #ff0000, #ff9900, #33cc33, #3399ff, #9933ff);
+        background-size: 400% 400%;
+        animation: rainbowAnimation 15s infinite;
+      }
+    
+      @keyframes rainbowAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    
+    
+    h1 {
+    font-size: 50px;
+    margin-top: 80px;
+    
+    }
+    
+    h1 {
+    /* Existing styles... */
+    transition: color 0.3s, transform 0.3s;
+    }
+    
+    h1:hover {
+    color: #020304;
+    transform: rotate(5deg);
+    }
+    
+    
+    .image-container {
+    margin: 50px;
+    text-align: center;
+    background-color: #e3f4c8;
+    padding: 80px;
+    border-radius: 2000px;
+    box-shadow: 10 14px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    animation: fadeIn 0.8s ease-in-out;
+    }
+    
+    
+    
+    .image-container:hover {
+    transform: scale(1.05);
+    }
+    
+    img {
+    width: 300%; 
+    max-width: 375px;
+    height: 200px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+    font-display: bold;
+    font-size: 35px;
+    margin-bottom: 50px;
+    }
+    
+    button {
+    background-color: #b7794c;
+    color: #fff;
+    padding: 10px 50px;
+    font-size: 25px;
+    border: 10;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    
+    button {
+    
+    animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    }
+    
+    
+    button:hover {
+    background-color: #2980b9;
+    }
+    
+    /* Existing styles... */
+    
+    @keyframes fadeIn {
+    from {
+    opacity: 0;
+    }
+    to {
+    opacity: 1;
+    }
+    }
+    
+    
+    .image-container:hover {
+    transform: scale(1.05);
+    
+    
+    }
+</style>
+
+</head>
+<body>
+
+    <h1>CHECK YOUR MENTAL HEALTH </h1>
+
+    <!-- Container for Page 1 -->
+    <div class="image-container">
+        <a href="/stress">
+            <img src="{{ url_for('static',filename='assets/stress1.jpg') }}" alt="Image 1">
+            <p> Stress</p>
+            <button>CHECK</button>
+        </a>
+    </div>
+
+    <!-- Container for Page 2 -->
+    <div class="image-container">
+        <a href="/depression">
+            <img src="{{ url_for('static',filename='assets/depression1.jpg') }}" alt="Image 2">
+            <p> Depression</p>
+            <button>CHECK</button>
+        </a>
+    </div>
+
+    <!-- Container for Page 3 -->
+    <div class="image-container">
+        <a href="/anxiety">
+            <img src="{{ url_for('static',filename='assets/anxiety1.jpg') }}" alt="Image 3">
+            <p> Anxiety</p>
+            <button>CHECK</button>
+        </a>
+    </div>
+
+</body>
+</html>

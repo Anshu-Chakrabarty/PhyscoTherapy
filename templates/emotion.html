@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; 
+        margin: 0;
+          padding: 0;
+    }
+      
+      
+      body::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          background: url('{{ url_for('static',filename='assets/bg1.jpeg') }}') center/contain;
+      }
+      
+      
+      form {
+        
+        max-width: 300px;
+        margin: 20px ;
+        padding: 30px;
+        border: 1px solid #020203;
+        border-radius: 100px;
+        background-color: #708b9f;
+        ;
+        opacity: 0;
+        animation: fadeInForm 1s ease-in-out forwards;
+      }
+      
+      @keyframes fadeInForm {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        opacity: 0;
+        animation: fadeInInput 1s ease-in-out forwards, pulsate 2s infinite alternate;
+      }
+      
+      @keyframes fadeInInput {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      button {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 12px;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        animation: fadeInButton 1s ease-in-out forwards;
+      }
+      
+      @keyframes fadeInButton {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      
+      button:hover {
+        background-color: #45a049;
+      }
+    
+     
+    
+    h1 {
+        margin-top: 0px;
+        color: #060303;
+        font-weight: bold;
+    }
+    
+    
+    
+    label {
+      color: #020203;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    textarea {
+        padding: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    button {
+        background-color: #006bc2;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    @keyframes backgroundAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    #output-box {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #020203;
+      border-radius: 10px;
+      background-color: #;
+      display: none;
+  }
+  .output-box {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #020203;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInOutputBox 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInOutputBox {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  .output-message {
+    color: #060303;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .output-details {
+    color: #020203;
+  }
+    </style>
+</head>
+<body>
+    <h1>Fill up the text box to detect your current emotion</h1>
+    <form action="/predict" method="post">
+        <label for="userInput">Write anything in your mind</label>
+        <textarea id="userInput" name="text"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="output-box">
+      <div class="output-message">
+        <p> Output</p>
+        {{prediction}}
+      </div>
+      <div class="output-details">
+      </div>
+  </div>
+  
+</body>
+</html>

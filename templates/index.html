@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psycological_Treatment</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/all.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Psychotherapy</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/emotions">Emotional</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/mentals">Mental</a>
+                    </li>
+                   
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="site-title">
+            <div class="site-background">
+                <h2>Psycological Friend</h2>
+                
+               
+            </div>
+        </section>
+
+        <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <div class="blog-content">
+                            <img src="{{ url_for('static',filename='assets/blog-post/post-1.png') }}" alt="post-1">
+                            <div class="blog-title">
+                                <h3>Talking to chatbots reduce stress and solves problems</h3>
+                                
+                                
+                                
+                            </div>
+                        </div>
+                       
+                        <div class="blog-content">
+                            <img src="{{ url_for('static',filename='assets/blog-post/post-2.jpeg') }}" alt="post-2">
+                            <div class="blog-title">
+                                <h3>AI to improve the accuracy of diagnosis and treatments.</h3>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img src="{{ url_for('static',filename='assets/blog-post/post-3.jpeg') }}" alt="post-3">
+                            <div class="blog-title">
+                                <h3>Technology is helping with quality control of treatment .</h3>
+                                
+                               
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img src="{{ url_for('static',filename='assets/blog-post/post-4.jpg') }}" alt="post-4">
+                            <div class="blog-title">
+                                <h3> AI  monitors  symptoms  and  reactions  to  provide  treatment</h3>
+                                
+                               
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img src="{{ url_for('static',filename='assets/blog-post/post-5.jpeg') }}" alt="post-5">
+                            <div class="blog-title">
+                                <h3>Chatbots advices communicate for mental health patients</h3>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <img src="{{ url_for('static',filename='assets/blog-post/post-7.jpeg') }}" alt="post-7">
+                            <div class="blog-title">
+                                <h3>Music boost your mood as well as mend a broken heart and recommend the needed playlist.</h3>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "This chatbot was built surprisingly fast with Botpress",
+      "botId": "60b8431b-2400-489e-9a7b-36f5c0cb4b7d",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "60b8431b-2400-489e-9a7b-36f5c0cb4b7d",
+      "webhookId": "042756e9-fa8c-405c-a6b7-964bb8eebf20",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "showPoweredBy": true,
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
+
+<section class="container">
+    <div class="site-content">
+        <div class="posts">
+        <div class="post-content">
+            <div class="post-image">
+                <div>
+                    <img src="{{ url_for('static',filename='assets/blog-post/blog1.webp') }}" class="img" alt="blog1">
+                </div>
+            </div>
+            <div class="post-title">
+                <a href="#">Why just to see..? try our model and cure your stress, depression, anxiety....</a>
+                <p id="post1Content">By analyzing linguistic cues, sentiment, and behavioral changes in text and voice interactions, AI can identify individuals at heightened risk. This early warning system enables mental health professionals to intervene promptly and provide the necessary support and intervention.</p>
+                <button class="btn post-btn" onclick="toggleContent( 'Read More','post1Content')">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="post-content">
+            <div class="post-image">
+                <div>
+                    <img src="{{ url_for('static',filename='assets/blog-post/blog2.jpg') }}" class="img" alt="blog2">
+                </div>
+                
+            </div>
+            <div class="post-title">
+                <a href="#">Depression: A Persistent Void of Emotion</a>
+                <p id="post2Content">Depression is not only a very adverse disorder, but an extremely pervasive one. Many patients find their depressive symptoms are able to withstand some of the more common, and relatively effective depression treatments, prompting a continuous search for promising new options. Among these newer approaches, artificial intelligence treatment for depression has begun to gain consideration for a growing number of patients. Read on to find out why.....</p>
+                <button class="btn post-btn" onclick="toggleContent('post2Content', 'Read More')">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="post-content">
+            <div class="post-image">
+                <div>
+                    <img src="{{ url_for('static',filename='assets/blog-post/blog3.jpg') }}" class="img" alt="blog3">
+                </div>
+                
+            </div>
+            <div class="post-title">
+                <a href="#">How do music help in psycological treatment...?</a>
+                <p id="post3Content">Music is said to enhance intelligence and focus, improve mental health, and boost the immune system as well as self-esteem and confidence. It can be used to relax, to boost and lift our mood, or to improve concentration. Music can also be used to aid in insomnia, helping to encourage and induce a deeper sleep. Many people have expressed how music is a form of ‘ escape’, and can quickly and effectively transport them to a better time, place, or memory..</p>
+                <button class="btn post-btn" onclick="toggleContent('post3Content', 'Read More')">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <hr>
+        <div class="post-content">
+            <div class="post-image">
+                <div>
+                    <img src="{{ url_for('static',filename='assets/blog-post/blog4.jpg') }}" class="img" alt="blog4">
+                </div>
+                
+                
+            </div>
+            <div class="post-title">
+                <a href="#">Support chronic pain users</a>
+                <p id="post4Content">Studies have found that using an AI powered chatbot results in higher engagement and adherence than traditional methods, and those who used it saw a reduction in comorbid anxiety and depression symptoms, measured on standard assessment score, and comparable shifts in physical capabilities...</p>
+                <button class="btn post-btn" onclick="toggleContent('post4Content', 'Read More')">Read More &nbsp;<i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <hr>
+        </div>
+       
+    </div>
+</section>
+<script>
+    function toggleContent(contentId, buttonText) {
+        var content = document.getElementById(contentId);
+
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+            document.querySelector(#${contentId} + button).textContent = 'Read Less';
+        } else {
+            content.style.display = 'none';
+            document.querySelector(#${contentId} + button).textContent = buttonText;
+        }
+    }
+</script>
+
+    </main>
+    
+    <script src="{{ url_for('static',filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/index.js') }}"></script>
+    
+</body>
+
+</html>

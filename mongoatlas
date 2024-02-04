@@ -1,0 +1,19 @@
+// Code of botpress backend to collect users social handles and connect them to their similar pers
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = 'mongodb://localhost:27017/';
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+
+async function storeChatbotOutput(user_id, message) {
+  try {
+    await client.connect();
+    const db = client.db('social_network_db');
+    const collection = db.collection('chatbot_outputs');
+
+    const timestamp = new Date();
+    const data = {
+      user_id,
+      message,
+      timestamp
+    };
+    //
