@@ -4,7 +4,7 @@ import numpy as np
 import joblib
 import altair as alt
 
-pipe_lr = joblib.load(open(r"C:\Users\user\Desktop\Emotion-Detection using text\App\Models\emotion_classifier_pipe_lr.pkl", "rb"))
+pipe_lr = joblib.load(open(r"C:\Users\user\Desktop\PSYCHOLOGY DETECTOR\App\Models\emotion_classifier_pipe_lr.pkl", "rb"))
 def predict_emotions(docx):
     results= pipe_lr.predict([docx])
     return results[0]

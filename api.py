@@ -1,7 +1,7 @@
 
 
 from flask import Flask, render_template, request, jsonify
-import pickle
+
 import joblib
 
 import numpy as np
@@ -9,13 +9,13 @@ import numpy as np
 app = Flask(__name__)
 
 
-model = pickle.load(open(r"C:\Users\user\Desktop\Emotion-Detection using text\emotion_classifier_pipe_lr.pkl", 'rb'))
+model = joblib.load(open(r"C:\Users\user\Desktop\PSYCHOLOGY DETECTOR\emotion_classifier_pipe_lr.pkl", 'rb'))
 
-model1 = joblib.load(open(r"C:\Users\user\Desktop\Emotion-Detection using text\Mental_Health\stress.pkl", 'rb'))
+model1 = joblib.load(open(r"C:\Users\user\Desktop\PSYCHOLOGY DETECTOR\Mental_Health\stress.pkl", 'rb'))
 
-model2 = joblib.load(open(r"C:\Users\user\Desktop\Emotion-Detection using text\Mental_Health\anxiety.pkl", 'rb'))
+model2 = joblib.load(open(r"C:\Users\user\Desktop\PSYCHOLOGY DETECTOR\Mental_Health\anxiety.pkl", 'rb'))
 
-model3 = joblib.load(open(r"C:\Users\user\Desktop\Emotion-Detection using text\Mental_Health\depression.pkl", 'rb'))
+model3 = joblib.load(open(r"C:\Users\user\Desktop\PSYCHOLOGY DETECTOR\Mental_Health\depression.pkl", 'rb'))
 
 @app.route('/')
 def index():
